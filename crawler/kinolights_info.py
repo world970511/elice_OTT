@@ -3,6 +3,7 @@ from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
 from bs4 import BeautifulSoup as bs
 import pandas as pd
+import datetime
 import time
 import re
 
@@ -78,7 +79,7 @@ if __name__ == "__main__":
     all_data=pd.DataFrame(columns=['title', 'year','kind','KMRB','genre','country','cast','director','runtime(min)','provider'])
 
     # txt파일에 담긴 소개 페이지 링크 추출
-    with open('kinolight_link.txt','r',encoding='utf-8') as f:
+    with open('kinolight_link_test.txt','r',encoding='utf-8') as f:
         links=f.readlines()
 
     #속성 오류로 체크되지 못한 리스트
@@ -93,14 +94,13 @@ if __name__ == "__main__":
             info=data_info(link)
         except:
             print('==오류==')
-            late_loading.append(link)
-            continue
+            late_loading+=link[links.index(link):]
+            break
         else:
             if info[-1]==[]:#스트리밍 사이트 칸이 비어있을 경우
                 late_loading.append(link)
             else:
                 all_data.loc[len(all_data)] = info
-                print(info)
 
     #혹시 마지막으로)속성 오류로 체크되지 못한 리스트
     late_loading_2=[]
@@ -112,17 +112,19 @@ if __name__ == "__main__":
                 info=data_info(link)
             except Exception as e:
                 print(e)
-                late_loading_2.append(link)
+                late_loading2 = link[links.index(link):]
+                break
             else:
                 all_data.loc[len(all_data)] = info
 
     # text파일과 csv 파일로 저장
-    all_data.to_csv('.\dataset\OTT_movie_tvShow_data.csv', mode='w', sep='\t', index=False)
-    all_data.to_csv('.\dataset\OTT_movie_tvShow_data.txt', mode='w', sep='\t', index=False)
+    s = '.\dataset\OTT_movie_tvShow_data' + datetime.date.today()
+    all_data.to_csv(s + '.csv', mode='w', sep='\t', index=False)
+    all_data.to_csv(s + '.txt', mode='w', sep='\t', index=False)
 
     #마지막으로 해봐도 추가 안된 리스트가 있을 경우
     if len(late_loading_2)>0:
-        with open('.\dataset\retry_link.txt', 'w', newline='') as f:
+        with open('kinolight_link.txt', 'w', newline='') as f:
             f.writelines('\n'.join(late_loading_2))
 
     print('=====완료=====')
