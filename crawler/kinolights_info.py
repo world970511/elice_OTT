@@ -14,12 +14,11 @@ driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), opti
 def data_info(link):
     # 키노라이츠 소개 페이지로 이동
     driver.get(link)
-    time.sleep(7)
+    time.sleep(4)
 
     # html가져오기
     source = driver.page_source
     html = bs(source, 'lxml')
-    #'KMRB','genre','country','cast','director','runtime'
 
     #kind
     try:
@@ -79,7 +78,7 @@ if __name__ == "__main__":
     all_data=pd.DataFrame(columns=['title', 'year','kind','KMRB','genre','country','cast','director','runtime(min)','provider'])
 
     # txt파일에 담긴 소개 페이지 링크 추출
-    with open('kinolight_link_test.txt','r',encoding='utf-8') as f:
+    with open('../kinolight_link.txt', 'r', encoding='utf-8') as f:
         links=f.readlines()
 
     #속성 오류로 체크되지 못한 리스트
@@ -94,7 +93,7 @@ if __name__ == "__main__":
             info=data_info(link)
         except:
             print('==오류==')
-            late_loading+=link[links.index(link):]
+            late_loading+=links[links.index(link):]
             break
         else:
             if info[-1]==[]:#스트리밍 사이트 칸이 비어있을 경우
@@ -112,19 +111,19 @@ if __name__ == "__main__":
                 info=data_info(link)
             except Exception as e:
                 print(e)
-                late_loading2 = link[links.index(link):]
+                late_loading2 = late_loading[links.index(link):]
                 break
             else:
                 all_data.loc[len(all_data)] = info
 
     # text파일과 csv 파일로 저장
-    s = '.\dataset\OTT_movie_tvShow_data' + datetime.date.today()
+    s = '../dataset/OTT_movie_tvShow_data' + str(datetime.date.today())
     all_data.to_csv(s + '.csv', mode='w', sep='\t', index=False)
     all_data.to_csv(s + '.txt', mode='w', sep='\t', index=False)
 
     #마지막으로 해봐도 추가 안된 리스트가 있을 경우
     if len(late_loading_2)>0:
-        with open('kinolight_link.txt', 'w', newline='') as f:
+        with open('../kinolight_link.txt', 'w', newline='') as f:
             f.writelines('\n'.join(late_loading_2))
 
     print('=====완료=====')
