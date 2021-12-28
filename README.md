@@ -127,5 +127,5 @@
 - OTT별 장단점 및 콘텐츠 특성 
 </br>
 
-## 📂스토리보드 & 시나리오
+## 📂스토리보드
 - 🔗 https://whimsical.com/CnoGZyqFuYrqz95s6d4NiM
