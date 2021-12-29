@@ -73,12 +73,13 @@ def data_info(link):
     #반환
     return [title,year,kind,KMRB,genre,country,cast,director,runtime,provider]
 
+
 if __name__ == "__main__":
 
     all_data=pd.DataFrame(columns=['title', 'year','kind','KMRB','genre','country','cast','director','runtime(min)','provider'])
 
     # txt파일에 담긴 소개 페이지 링크 추출
-    with open('../kinolight_link.txt', 'r', encoding='utf-8') as f:
+    with open('../kinolight_link_0_5000.txt', 'r', encoding='utf-8') as f:
         links=f.readlines()
 
     #속성 오류로 체크되지 못한 리스트
@@ -91,8 +92,11 @@ if __name__ == "__main__":
     for link in links:
         try:
             info=data_info(link)
-        except:
-            print('==오류==')
+        except AttributeError as ae:
+            late_loading.append(link)
+            continue
+        except Exception as e:
+            print(e)
             late_loading+=links[links.index(link):]
             break
         else:
@@ -111,20 +115,19 @@ if __name__ == "__main__":
                 info=data_info(link)
             except Exception as e:
                 print(e)
-                late_loading2 = late_loading[links.index(link):]
+                late_loading_2 = late_loading[late_loading.index(link):]
                 break
             else:
                 all_data.loc[len(all_data)] = info
 
     # text파일과 csv 파일로 저장
-    s = '../dataset/OTT_movie_tvShow_data' + str(datetime.date.today())
-    all_data.to_csv(s + '.csv', mode='w', sep='\t', index=False)
-    all_data.to_csv(s + '.txt', mode='w', sep='\t', index=False)
+    s = '../dataset/OTT_movie_tvShow_data1_1' + str(datetime.date.today())
+    all_data.to_csv(s + '.csv', mode='a+', sep='\t', index=False)
+    all_data.to_csv(s + '.txt', mode='a+', sep='\t', index=False)
 
-    #마지막으로 해봐도 추가 안된 리스트가 있을 경우
-    if len(late_loading_2)>0:
-        with open('../kinolight_link.txt', 'w', newline='') as f:
-            f.writelines('\n'.join(late_loading_2))
+    # 마지막으로 해봐도 추가 안된 리스트가 있을 경우
+    with open('../kinolight_link_0_5000.txt', 'w+') as f:
+        f.writelines(''.join(late_loading_2))
 
     print('=====완료=====')
     print(all_data)
