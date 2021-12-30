@@ -17,8 +17,10 @@ for i in range(len(file_list)):
         all_data = pd.concat([all_data, data], ignore_index=True, axis=0)
 
 print('=================')
+print('최종 데이터 확인 :', len(all_data))
+all_data.drop_duplicates(['title'])# 타이틀열을 기준으로 중복되는 데이터 제거
+print('중복 제거후 데이터 :')
 all_data.info()
-
 all_data.to_csv('../kinolight_all_data.csv',mode='w', index=False)
 
 
