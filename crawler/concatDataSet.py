@@ -24,3 +24,4 @@ all_data.info()
 all_data.to_csv('../kinolight_all_data.csv',mode='w', index=False)
 
 
+
