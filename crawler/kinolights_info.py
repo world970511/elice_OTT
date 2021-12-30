@@ -79,7 +79,7 @@ if __name__ == "__main__":
     all_data=pd.DataFrame(columns=['title', 'year','kind','KMRB','genre','country','cast','director','runtime(min)','provider'])
 
     # txt파일에 담긴 소개 페이지 링크 추출
-    with open('../kinolight_link_0_5000.txt', 'r', encoding='utf-8') as f:
+    with open('../kinolight_link.txt', 'r', encoding='utf-8') as f:
         links=f.readlines()
 
     #속성 오류로 체크되지 못한 리스트
@@ -126,7 +126,7 @@ if __name__ == "__main__":
     all_data.to_csv(s + '.txt', mode='a+', sep='\t', index=False)
 
     # 마지막으로 해봐도 추가 안된 리스트가 있을 경우
-    with open('../kinolight_link_0_5000.txt', 'w+') as f:
+    with open('../kinolight_link.txt', 'w+') as f:
         f.writelines(''.join(late_loading_2))
 
     print('=====완료=====')
