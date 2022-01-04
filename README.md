@@ -136,4 +136,4 @@
 </br>
 
 ## 📂스토리보드
-- 🔗 https://whimsical.com/CnoGZyqFuYrqz95s6d4NiM
+- 🔗 https://www.figma.com/file/od7rNoPL0p5R8W83ntgGSF/watchOTT?node-id=0%3A1
