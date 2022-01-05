@@ -93,11 +93,19 @@
 
 ## ⚒️기술 스택
 
-### Front-end                                                                                                                        
+### Front-end   
+|<img src="https://profilinator.rishav.dev/skills-assets/html5-original-wordmark.svg" alt="HTML5" width="50px" height="50px" />|<img src="https://profilinator.rishav.dev/skills-assets/css3-original-wordmark.svg" alt="CSS3" width="50px" height="50px" />|  <img src="https://profilinator.rishav.dev/skills-assets/javascript-original.svg" alt="JavaScript" width="50px" height="50px" />| <img src="https://profilinator.rishav.dev/skills-assets/react-original-wordmark.svg" alt="React" width="50px" height="50px" />| <img src="https://profilinator.rishav.dev/skills-assets/logo-title.svg" alt="Chart.js" width="50px" height="50px" />|
+| :-----------------------------------------------------------: | :-----------------------------------------------------------: | :-----------------------------------------------------------: | :-----------------------------------------------------------: | :-----------------------------------------------------------: |
+|HTML5|CSS3|JavaScript|React|Chart.js|
 
 ### Back-end
 
+|<img src="https://profilinator.rishav.dev/skills-assets/python-original.svg" alt="Python" width="50px" height="50px" />|<img src="https://profilinator.rishav.dev/skills-assets/flask.png" alt="Flask" width="50px" height="50px"/> |<img src="https://profilinator.rishav.dev/skills-assets/mariadb.png" alt="Maria DB" width="50px" height="50px"/>|
+| :-----------------------------------------------------------: | :-----------------------------------------------------------: | :-----------------------------------------------------------: |
+| Python | Flask | MariaDB |
+
 ### AI
+
 
 ### 버전 관리
 
@@ -128,4 +136,4 @@
 </br>
 
 ## 📂스토리보드
-- 🔗 https://whimsical.com/CnoGZyqFuYrqz95s6d4NiM
+- 🔗 https://www.figma.com/file/od7rNoPL0p5R8W83ntgGSF/watchOTT?node-id=0%3A1
