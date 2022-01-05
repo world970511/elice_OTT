@@ -96,7 +96,7 @@ if __name__ == "__main__":
     # txt파일에 담긴 소개 페이지 링크 추출
     with open('../kinolight_link_img.txt', 'r', encoding='utf-8') as f:
         links = f.readlines()
-
+    links=links[1000:1020]
     # 속성 오류로 체크되지 못한 리스트
     late_loading = []
 
