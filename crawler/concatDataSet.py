@@ -1,11 +1,11 @@
 import os
 import pandas as pd
 
-all_data = pd.DataFrame(columns=['title', 'year', 'kind', 'KMRB', 'genre', 'country',
+all_data = pd.DataFrame(columns=['img_url','title', 'year', 'kind', 'KMRB', 'genre', 'country',
                                  'cast', 'director', 'runtime(min)', 'provider'])
 #파일 모음집 호출
-os.chdir('../dataset/notDuplicates')
-file_list= os.listdir('.')
+os.chdir('../dataset/img')
+file_list= os.listdir()
 
 for i in range(len(file_list)):
     if 'csv' in file_list[i]:
@@ -21,7 +21,7 @@ print('최종 데이터 확인 :', len(all_data))
 all_data.drop_duplicates(['title'])# 타이틀열을 기준으로 중복되는 데이터 제거
 print('중복 제거후 데이터 :')
 all_data.info()
-all_data.to_csv('../kinolight_all_data.csv',mode='w', index=False)
+all_data.to_csv('../kinolight_img_data.csv',mode='w', index=False)
 
 
 
