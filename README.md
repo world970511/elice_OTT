@@ -1,3 +1,7 @@
+<h1 align="center">
+  <img width="300" src="">
+</h1>
+
 <h3 align="center">앨리스 AI 트랙 -OTT 서비스 프로젝트: Watch OTT</h3>
 
 <p align="center">
