@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img width="300" src="">
+  <img width="300" src="https://raw.githubusercontent.com/world970511/elice_OTT/master/doc/img_etc/%EA%B7%B8%EB%A6%BC1_1.jpg">
 </h1>
 
 <h3 align="center">앨리스 AI 트랙 -OTT 서비스 프로젝트: Watch OTT</h3>
@@ -108,8 +108,10 @@
 | :-----------------------------------------------------------: | :-----------------------------------------------------------: | :-----------------------------------------------------------: |
 | Python | Flask | MariaDB |
 
-### AI
-
+### 데이터분석
+|<img src="https://raw.githubusercontent.com/world970511/elice_OTT/master/doc/img_etc/800px-Pandas_logo.svg.png" width="90px" height="50px">|<img src="https://raw.githubusercontent.com/world970511/elice_OTT/master/doc/img_etc/1200px-NumPy_logo_2020.svg.png" width="80px" height="50px">|<img src="https://raw.githubusercontent.com/world970511/elice_OTT/master/doc/img_etc/logo-plotly.svg" width="50px" height="50px">|
+| :-----------------------------------------------------------: | :-----------------------------------------------------------: | :-----------------------------------------------------------: |
+|Pandas|Numpy|Plotly|
 
 ### 버전 관리
 
