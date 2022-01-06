@@ -2,7 +2,7 @@
   <img width="300" src="https://raw.githubusercontent.com/world970511/elice_OTT/master/doc/img_etc/%EA%B7%B8%EB%A6%BC1_1.jpg">
 </h1>
 
-<h3 align="center">앨리스 AI 트랙 -OTT 서비스 프로젝트: Watch OTT</h3>
+<h3 align="center">앨리스 AI 트랙 -OTT 서비스 프로젝트: Which OTT</h3>
 
 <p align="center">
   📰
@@ -142,4 +142,4 @@
 </br>
 
 ## 📂스토리보드
-- 🔗 https://www.figma.com/file/od7rNoPL0p5R8W83ntgGSF/watchOTT?node-id=0%3A1
+- 🔗 https://www.figma.com/file/od7rNoPL0p5R8W83ntgGSF/WhichOTT?node-id=0%3A1
