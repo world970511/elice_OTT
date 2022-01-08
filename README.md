@@ -109,9 +109,9 @@
 | Python | Flask | MariaDB |
 
 ### 데이터분석
-|<img src="https://raw.githubusercontent.com/world970511/elice_OTT/master/doc/img_etc/800px-Pandas_logo.svg.png" width="90px" height="50px">|<img src="https://raw.githubusercontent.com/world970511/elice_OTT/master/doc/img_etc/1200px-NumPy_logo_2020.svg.png" width="80px" height="50px">|<img src="https://raw.githubusercontent.com/world970511/elice_OTT/master/doc/img_etc/logo-plotly.svg" width="50px" height="50px">|
-| :-----------------------------------------------------------: | :-----------------------------------------------------------: | :-----------------------------------------------------------: |
-|Pandas|Numpy|Plotly|
+|<img src="https://raw.githubusercontent.com/world970511/elice_OTT/master/doc/img_etc/800px-Pandas_logo.svg.png" width="90px" height="50px">|<img src="https://raw.githubusercontent.com/world970511/elice_OTT/master/doc/img_etc/1200px-NumPy_logo_2020.svg.png" width="80px" height="50px">|<img src="https://raw.githubusercontent.com/world970511/elice_OTT/master/doc/img_etc/logo-plotly.svg" width="50px" height="50px">|<img src="https://raw.githubusercontent.com/world970511/elice_OTT/master/doc/img_etc/colab.png" width="50px" height="50px">|
+| :-----------------------------------------------------------: | :-----------------------------------------------------------: | :-----------------------------------------------------------: | :-----------------------------------------------------------: |
+|Pandas|Numpy|Plotly|Colab|
 
 ### 버전 관리
 
